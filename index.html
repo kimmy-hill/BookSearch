@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link ref="stylesheet" href="./assets/css/style.css" />
-    <script defer src="./assets/js/script.js"></script>
-    <title>Parks For Barks</title>
-</head>
-<body>
-
-    <hero class="jumbotron">
-        <h1>Parks for Barks</h1>
-
-        <form>
-            <h3>Search for Dog Parks:</h3>
-            <button class="btn">Fetch!</button>
-        </form>
-
-    </hero>
-
-    <main class="body">
-    <!-- Business Info Box -->
-        <div class="business-info">
-            <h2>Business Info</h2>
-        </div>
-
-    <!-- Map Box -->
-        <div class="map">
-            <h2>Map</h2>
-        </div>
-
-    <!-- Reviews Box -->
-        <div class="reviews">
-            <h2>Reviews</h2>
-        </div>
-
-    <!-- Weather Box -->
-        <div class="weather">
-            <h2>Weather</h2>
-        </div>
-
-    </main>
-
-    <footer>
-    </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Parks for Barks</title>
     
-</body>
+    <!--CSS Framework and color scheme-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css">
+  </head>
+
+  <!--start hero form-->
+
+  <div class="hero-form">
+    <h3>Search for Dog Parks in Your Area</h3>
+    <label for="city">City:</label>
+    <input
+      type="text"
+      placeholder="Your City"
+      id="city"
+      name="city"
+      class="form-input"
+    />
+    <label for="state">State:</label>
+    <input
+      type="text"
+      placeholder="Your State"
+      id="state"
+      name="state"
+      class="form-input"
+    />
+    <label for="zip">Zip Code:</label>
+    <input
+      type="text"
+      placeholder="Zip Code"
+      name="zip"
+      id="zip"
+      class="form-input"
+    />
+    <button type="submit">Fetch Results!</button>
+  </div>
+
+  <!--end hero form-->
+
+  <body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
