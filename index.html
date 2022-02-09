@@ -4,34 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Books</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-  </head>
-
-  <!--start hero form-->
-
-  <section class="hero columns is-pulled-right">
-    <div class="hero-body">
-      <h2>Search for Books</h2>
-      <label for="books"></label>
-      <input
-        type="text"
-        placeholder="Search for Books"
-        id="books"
-        name="books"
-        class="form-input"
-      />
-      <button id="search-books" type="submit">Search</button>
-    </div>
-  </section>
-
-  <!--end hero form-->
-
+    <title>Book Search</title>
+    
   <body>
+
+    <hero class="jumbotron">
+      <h1 class="page-title">Book Search</h1>
+      <img src=""/>
+      <form>
+        <h3>Search Instructions:</h3>
+        <p>Type in your book title or author name to search for a description.</p>
+        <input class="search-bar" rel="search bar" />
+        <button class="btn button is-primary">Search:</button>
+      </form>
+    </hero>
+
+    <div class="results-title">
+      <h2>Search Results</h2>git 
+    </div>
+
+    <div class="card">
+      <img class="bookcover" src="" />
+      <h3 class="book-name">Moby Dick</h3>
+      <p class="book-desription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam sed ipsa error maiores accusantium, totam voluptatem ab unde eum dolorum sit placeat consequatur rem incidunt repellendus optio est reiciendis!
+      </p>
+    </div>
+
+    <footer>
+      <p>&copy:group9</p>
+      <p>Sources: Google.Books, Goodreads, & UnSplash</p>
+    </footer>
+
+    </body>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
