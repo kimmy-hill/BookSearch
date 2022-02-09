@@ -1,0 +1,9 @@
+.hero {
+  background-image: url(https://via.placeholder.com/150);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-attachment: fixed;
+}
