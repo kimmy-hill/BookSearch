@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(https://via.placeholder.com/150);
+  background-image: url("../images/hero-image.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
