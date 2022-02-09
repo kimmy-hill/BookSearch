@@ -5,6 +5,25 @@ document.getElementById("search-books").addEventListener("click", function() {
     alert("List Available Books");
 })
 
+//calls GoogleBooks API
+function bookSearch(Title) {
+    var search = Title;
+  
+    var queryURL = "https://www.googleapis.com/books/v1/volumes?q=" + search;
+  
+    $.ajax({
+      url: queryURL,
+      dataType: "json",
+      type: "GET",
+      success: function (response) {
+        renderBooks(response);
+      },
+      error: function (response) {
+        console.log(response);
+      },
+    });
+  }
+
 fetch("https://goodreadsraygorodskijv1.p.rapidapi.com/addBookToShelf", {
 	"method": "POST",
 	"headers": {
