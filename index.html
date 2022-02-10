@@ -10,29 +10,59 @@
     
   <body>
 
-    <hero class="jumbotron">
-      <h1 class="page-title">Book Search</h1>
-      <img src=""/>
+  <hero class="hero">
+    <div class="hero-body box">
+      <h1 class="title is-underlined">Book Search</h1>
+        <img src=""/>
       <form>
-        <h3>Search Instructions:</h3>
-        <p>Type in your book title or author name to search for a description.</p>
-        <input class="search-bar" rel="search bar" />
-        <button class="btn button is-primary">Search:</button>
+          <h3 class="subtitle">Search Instructions:</h3>
+          <p>Type in your book title or author name to search for a description.</p>
+      <div class="field has-addons">
+      <div class="control has-icons-left has-icons-right is-expanded">
+        <input type="text" class="input is-info"  placeholder="Search" />
+      </div>
+        <button id="search-btn" class="button is-info">Search</button>
+      </div>   
       </form>
-    </hero>
+    </div>
+  </hero>
 
-    <div class="results-title">
-      <h2>Search Results</h2>git 
+    <div class="title has-text-centered">
+      <h2>Search Results</h2>
     </div>
 
-    <div class="card">
-      <img class="bookcover" src="" />
-      <h3 class="book-name">Moby Dick</h3>
-      <p class="book-desription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam sed ipsa error maiores accusantium, totam voluptatem ab unde eum dolorum sit placeat consequatur rem incidunt repellendus optio est reiciendis!
-      </p>
+    <!--placeholder cards start-->
+
+    <div id="book-cards" class="content columns custom-boxes-container">
+      <div class="column box">
+        <img class="bookcover" src="" />
+        <h3 class="book-name">Moby Dick</h3>
+        <p class="book-desription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam sed ipsa error maiores accusantium, totam voluptatem ab unde eum dolorum sit placeat consequatur rem incidunt repellendus optio est reiciendis!
+        </p>
+      </div>
+      <div class="column box">
+        <img class="bookcover" src="" />
+        <h3 class="book-name">Moby Dick</h3>
+        <p class="book-desription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam sed ipsa error maiores accusantium, totam voluptatem ab unde eum dolorum sit placeat consequatur rem incidunt repellendus optio est reiciendis!
+        </p>
+      </div>
+      <div class="column box">
+        <img class="bookcover" src="" />
+        <h3 class="book-name">Moby Dick</h3>
+        <p class="book-desription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam sed ipsa error maiores accusantium, totam voluptatem ab unde eum dolorum sit placeat consequatur rem incidunt repellendus optio est reiciendis!
+        </p>
+      </div>
+      <div class="column box">
+        <img class="bookcover" src="" />
+        <h3 class="book-name">Moby Dick</h3>
+        <p class="book-desription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam sed ipsa error maiores accusantium, totam voluptatem ab unde eum dolorum sit placeat consequatur rem incidunt repellendus optio est reiciendis!
+        </p>
+      </div>
     </div>
 
-    <footer>
+    <!--placeholder cards end-->
+
+    <footer class="footer">
       <p>&copy:group9</p>
       <p>Sources: Google.Books, Goodreads, & UnSplash</p>
     </footer>

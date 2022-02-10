@@ -1,0 +1,2 @@
+var apiKeyGoogle = "AIzaSyA_MCwdAKgVfrMu2ysTeBzeeRi4OkuAo9c"
+var apiKeyGoodreads = "1680e01c37msh7d95652a9fba73dp15927cjsnf2dbb215392e"
