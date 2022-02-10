@@ -24,7 +24,7 @@ function fetchBookInfo() {
         if(res.ok){
             res.json().then(function(data){
                 console.log(data)
-                renderPoster(data)
+                // renderPoster(data)
                 
 
             })
@@ -35,7 +35,7 @@ function fetchBookInfo() {
 
 function renderPoster(data){
     console.log(data)
-    bookPoster.attr("src", data.imageLinks.thumbnail)
+    // bookPoster.attr("src", data.items.imageLinks.thumbnail)
     bookTitle.text(data.volumeInfo.title)
     bookDescription.text(data.volumeInfo.description)
     bookAuth.text(data.volumeInfo.author)
@@ -43,3 +43,4 @@ function renderPoster(data){
 }
 
 document.getElementById("search-btn").addEventListener("click", fetchBookInfo())
+
