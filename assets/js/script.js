@@ -2,6 +2,7 @@ var apiKeyGoogle = "AIzaSyA_MCwdAKgVfrMu2ysTeBzeeRi4OkuAo9c"
 var apiKeyGoodreads = "1680e01c37msh7d95652a9fba73dp15927cjsnf2dbb215392e"
 
 //https://www.youtube.com/watch?v=uaMMkaa-P_A
+// slide to top jQuery function/animation?
 
 $(document).ready(function() {
     var item, title, author, publisher, bookLink, booksImg
@@ -45,7 +46,23 @@ $(document).ready(function() {
     });
     // function to display results in html
     function displayResults(response) {
-        for(var i = 0; i < response.items.length; i+=2) {}
+        for(var i = 0; i < res.items.length; i+=2) {
+            item = res.items[i];
+            title1 = item.volumeInfo.title;
+            author1 = item.volumeInfo.author;
+            publisher1 = item.volumeInfo.publisher;
+            bookIsbn = item.volumeInfo.industryIdentifiers.identifier;
+            bookLink = item.volumeInfo.previewLink;
+            bookImg = (item.volumeInfo.imageLinks) ? item.volumeInfo.imageLinks.thumbnail : placeHldr;
+
+            // output to output list
+            outputList.innerHTML += '<div class="row mt-4">' +
+            + formatOutput(bookImg, title, author, publisher, bookLink, bookIsbn)
+            '</div>'
+        }
     };
+
+    //template for bulma cards
+    function formatOutput()
     
 });
