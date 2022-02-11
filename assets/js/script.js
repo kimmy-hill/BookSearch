@@ -19,7 +19,7 @@ const apiKey = "&key=AIzaSyCkVrQHfJ5Npv5EYn671if30ePZ_8IC1g0"
 
 function fetchBookInfo() {
     console.log(bookTitle)
-    fetch(apiUrlFirst + bookTitle)
+    fetch(apiUrlFirst + "lord of the rings")
     .then(function (res) {
         if(res.ok){
             res.json().then(function(data){
