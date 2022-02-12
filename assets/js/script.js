@@ -26,12 +26,18 @@ var formSubmitHandler = function(event) {
     }
 };
 
+let book = {
+    fetchBook: function(searchTerm) {
+        fetch("https://www.googleapis.com/books/v1/volumes?q=" + searchTerm)
+    }
+}
+
 // fetch function
 function fetchBookInfo() {
-    /* if(bookTitle.length === 0) {
+    if(bookTitle.length === 0) {
         bookTitle.textContent = "No titles found.";
         return;
-    } */
+    }
 
     fetch(apiUrlFirst + bookTitle)
     .then(function (res) {
@@ -55,6 +61,48 @@ function renderPoster(data){
     bookAuth.text(data.volumeInfo.author)
 
 }
+
+function fetchBooks(searchTerm) {
+    // will fetch book titles relateded to search terms
+    fetch("https://www.googleapis.com/books/v1/volumes?q=" + searchTerm)
+      .then(function (result) {
+        return result.json();
+      })
+      .then(function (result) {
+        // retrieves random 3 books from response and calls displayBook to output to viewport
+        for (i = 0; i < 3; i++) {
+          let a = Math.floor(Math.random() * 10);
+          let book = result.items[a].volumeInfo;
+  
+          // to check for duplicates
+          if (booksToDisplay.includes(book)) {
+            i--
+          }
+          else {
+            booksToDisplay.push(book);
+            displayBook(book, i);
+          };
+        };
+      }).catch(function (error) {
+        // logs error if a problem occurs
+        console.log(error);
+      });
+};
+
+// functions for printing content to screen
+function displayBook(bookInfo, i) {
+    let bookEl = $("#suggestion-" + i);
+    let bookLink = $("<a>");
+    bookLink.attr("href", bookInfo.infoLink);
+    bookLink.attr("target", "_blank");
+    let bookImg = $("<img>");
+    bookImg.attr("alt", bookInfo.title + " image preview");
+    bookImg.attr("src", bookInfo.imageLinks.thumbnail);
+    bookImg.attr("class", "offset-s1, z-depth-3"); // add class/style
+  
+    bookLink.append(bookImg);
+    bookEl.append(bookLink);
+  };
 
 // event listener on cick
 document.getElementById("search-btn").addEventListener("click", fetchBookInfo())
