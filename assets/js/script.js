@@ -71,7 +71,7 @@ var displayBooks = function(title, searchTerm) {
 }
 
 
-
+/* ADDING TEST CODE
 
 function fetchBookInfo() {
     console.log(bookTitle)
@@ -106,7 +106,7 @@ function renderPoster(data){
 
 document.getElementById("search-btn").addEventListener("click", fetchBookInfo())
 
-
+ADDING TEST CODE*/
 
 let modalBtn = document.getElementById("modal-btn")
 let modal = document.querySelector(".modal")
