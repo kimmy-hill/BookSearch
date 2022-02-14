@@ -15,7 +15,7 @@ WHEN I view the search results
 THEN I can see the title, author, and a brief description of the book, divided into individual cards.
 
 ## Deployed Weblink:
-https://jclanc7507.github.io/Group9-Project/
+https://kimmy-hill.github.io/Group9-Project/
 
 ## Collaborator GitHub Links:
 Danny - https://github.com/Danielyaj4
