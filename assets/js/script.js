@@ -1,6 +1,5 @@
 // vars
 var bookTitle = $("#book-search")
-var bookTitle = $("#book-search")
 var bookAuth = $("#book-author")
 var bookDescription = $("#book-description")
 var bookPoster = $("#book-image")
@@ -49,7 +48,7 @@ var displayBooks = function(title, searchTerm) {
 
     for (var i = 0; i < title.length; i++) {
         //format book name
-        var titleText = response.items[0].volumeInfo + "," + response.items[0].volumeInfo.authors;
+        var titleText = response.items[0].volumeInfo.title + "," + response.items[0].volumeInfo.authors;
 
         //create container for book
         var bookEl = document.createElement("div");
@@ -101,7 +100,7 @@ function renderPoster(data){
     // bookPoster.attr("src", data.items.imageLinks.thumbnail)
     bookTitle.text(data.volumeInfo.title)
     bookDescription.text(data.volumeInfo.description)
-    bookAuth.text(data.volumeInfo.author)
+    bookAuth.text(data.volumeInfo.authors)
 
 }
 
